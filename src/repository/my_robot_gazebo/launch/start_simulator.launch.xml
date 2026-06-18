@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Server (背景運算，負責真正跑物理模擬) -->
+  <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
+    <arg name="gz_args" value="-s -r $(find-pkg-share my_robot_gazebo)/worlds/empty.sdf"/>
+    <arg name="on_exit_shutdown" value="True"/>
+  </include>
+
+  <!-- Client / GUI only (畫面視窗，VirtualBox 要加 render-engine ogre) -->
+  <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
+    <arg name="gz_args" value="-g --render-engine ogre"/>
+    <arg name="on_exit_shutdown" value="True"/>
+  </include>
+
+  <!-- Bridge (翻譯員，把 Gazebo 的時鐘接給 ROS2) -->
+  <node pkg="ros_gz_bridge" exec="parameter_bridge"
+        args="--ros-args -p config_file:=$(find-pkg-share my_robot_gazebo)/config/gz_bridge.yaml" />
+</launch>

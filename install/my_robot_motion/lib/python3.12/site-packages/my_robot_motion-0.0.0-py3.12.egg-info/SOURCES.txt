@@ -1,0 +1,17 @@
+LICENSE
+package.xml
+setup.cfg
+setup.py
+../../../build/my_robot_motion/my_robot_motion.egg-info/PKG-INFO
+../../../build/my_robot_motion/my_robot_motion.egg-info/SOURCES.txt
+../../../build/my_robot_motion/my_robot_motion.egg-info/dependency_links.txt
+../../../build/my_robot_motion/my_robot_motion.egg-info/entry_points.txt
+../../../build/my_robot_motion/my_robot_motion.egg-info/requires.txt
+../../../build/my_robot_motion/my_robot_motion.egg-info/top_level.txt
+../../../build/my_robot_motion/my_robot_motion.egg-info/zip-safe
+my_robot_motion/__init__.py
+my_robot_motion/my_first_node.py
+resource/my_robot_motion
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <let name="urdf_file" value="$(find-pkg-share my_robot_description)/urdf/my_robot.urdf" />
+  <node pkg="robot_state_publisher" exec="robot_state_publisher">
+    <param name="robot_description" value="$(file-content $(var urdf_file))" type="str" />
+  </node>
+  <node pkg="rviz2" exec="rviz2" />
+  <node pkg="tf2_ros" exec="static_transform_publisher"
+        args="--x 0 --y 0 --z 0 --roll 0 --pitch 0 --yaw 0 --frame-id world --child-frame-id base_link" />
+  <node pkg="joint_state_publisher_gui" exec="joint_state_publisher_gui" />
+</launch>

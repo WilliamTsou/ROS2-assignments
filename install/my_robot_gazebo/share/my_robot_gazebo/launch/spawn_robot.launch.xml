@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+  <let name="urdf_file" value="$(find-pkg-share my_robot_description)/urdf/arm.urdf" />
+
+  <!-- 翻譯員：把 urdf 轉成 ROS2 訊息，廣播到 /robot_description 頻道 -->
+  <node pkg="robot_state_publisher" exec="robot_state_publisher">
+    <param name="robot_description" value="$(command 'xacro $(var urdf_file)')" type="str" />
+    <param name="use_sim_time" value="true" />
+  </node>
+
+  <!-- 接生員：去 /robot_description 頻道把機器人「生」進 Gazebo 房間裡 -->
+  <node pkg="ros_gz_sim" exec="create"
+        args="-topic /robot_description -name my_arm -z 0.1" />
+
+  <!-- 廣播員：持續報告每個關節現在轉到幾度 -->
+  <node pkg="controller_manager" exec="spawner" args="joint_state_broadcaster" />
+
+  <!-- 畫面：打開 RViz 來看 -->
+  <node pkg="rviz2" exec="rviz2">
+    <param name="use_sim_time" value="true" />
+  </node>
+
+  <node pkg="controller_manager" exec="spawner" output="screen"
+        args="arm_controller -c /controller_manager" />
+  <node pkg="controller_manager" exec="spawner" output="screen"
+        args="gripper_controller -c /controller_manager" />
+
+</launch>

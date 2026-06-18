@@ -1,0 +1,22 @@
+[1.746s] Invoking command in '/home/user/ros2_ws/src/repository/my_robot_motion': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/user/ros2_ws/build/my_robot_motion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/user/ros2_ws/install/my_robot_motion/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/my_robot_motion build --build-base /home/user/ros2_ws/build/my_robot_motion/build install --record /home/user/ros2_ws/build/my_robot_motion/install.log --single-version-externally-managed install_data
+[2.250s] running egg_info
+[2.290s] writing ../../../build/my_robot_motion/my_robot_motion.egg-info/PKG-INFO
+[2.290s] writing dependency_links to ../../../build/my_robot_motion/my_robot_motion.egg-info/dependency_links.txt
+[2.290s] writing entry points to ../../../build/my_robot_motion/my_robot_motion.egg-info/entry_points.txt
+[2.291s] writing requirements to ../../../build/my_robot_motion/my_robot_motion.egg-info/requires.txt
+[2.291s] writing top-level names to ../../../build/my_robot_motion/my_robot_motion.egg-info/top_level.txt
+[2.372s] reading manifest file '../../../build/my_robot_motion/my_robot_motion.egg-info/SOURCES.txt'
+[2.373s] adding license file 'LICENSE'
+[2.374s] writing manifest file '../../../build/my_robot_motion/my_robot_motion.egg-info/SOURCES.txt'
+[2.374s] running build
+[2.374s] running build_py
+[2.374s] running install
+[2.388s] running install_lib
+[2.430s] running install_data
+[2.430s] running install_egg_info
+[2.476s] removing '/home/user/ros2_ws/install/my_robot_motion/lib/python3.12/site-packages/my_robot_motion-0.0.0-py3.12.egg-info' (and everything under it)
+[2.477s] Copying ../../../build/my_robot_motion/my_robot_motion.egg-info to /home/user/ros2_ws/install/my_robot_motion/lib/python3.12/site-packages/my_robot_motion-0.0.0-py3.12.egg-info
+[2.477s] running install_scripts
+[2.725s] Installing my_first_node script to /home/user/ros2_ws/install/my_robot_motion/lib/my_robot_motion
+[2.725s] writing list of installed files to '/home/user/ros2_ws/build/my_robot_motion/install.log'
+[2.763s] Invoked command in '/home/user/ros2_ws/src/repository/my_robot_motion' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/user/ros2_ws/build/my_robot_motion/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/user/ros2_ws/install/my_robot_motion/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../build/my_robot_motion build --build-base /home/user/ros2_ws/build/my_robot_motion/build install --record /home/user/ros2_ws/build/my_robot_motion/install.log --single-version-externally-managed install_data
